@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXTLEVEL CHAT | Robot Math Tutor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <style>
+    body {
+      font-family: 'Space+Grotesk', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #010c08;
+      color: #ecfdf5;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(16, 185, 129, 0.05);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(16, 185, 129, 0.2);
+      border-radius: 10px;
+    }
+    @keyframes scan {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+    .scan-line {
+      animation: scan 8s linear infinite;
+      opacity: 0.15;
+      background: linear-gradient(to bottom, transparent, #10b98122, transparent);
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100;
+    }
+    .katex { font-size: 1.1em; }
+    .robotic-glow {
+      text-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+    }
+  </style>
+  <script>
+    // Ensure process.env is available for the Gemini SDK in the browser
+    window.process = window.process || { env: {} };
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@1.34.0",
+    "katex": "https://esm.sh/katex@0.16.11",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root">
+    <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: #010c08; color: #10b981; font-family: 'JetBrains Mono', monospace;">
+      <div style="text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.05em; color: #34d399;">NEXTLEVEL</div>
+        <div style="font-size: 0.75rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.4em;">Booting Robotic Core...</div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>

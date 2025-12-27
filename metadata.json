@@ -1,0 +1,8 @@
+{
+  "name": "NEXTLEVEL AI",
+  "description": "A high-speed futuristic university-level mathematics chatbot for IT and Business students, featuring an animated robot tutor and emerald glassmorphism UI.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
